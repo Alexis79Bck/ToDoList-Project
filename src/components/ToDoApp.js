@@ -1,4 +1,5 @@
 import { useState } from "react";
+import ToDoList from "./ToDoList";
 
 export default function ToDoApp () {
     /**
@@ -69,7 +70,8 @@ export default function ToDoApp () {
                  arreglo como parte de una funcion el cual se puede renderizar.
                  */
                 todolist.map(item => (
-                    <li key={item.id}> {item.title} </li>
+                    //<li key={item.id}> {item.title} </li>
+                    <ToDoList item={item} key={item.id}/> //Se creo un componente llamado ToDoList el cual recibira como prop -item-, en su propiedad item
                 ))
             }
             </ul>
