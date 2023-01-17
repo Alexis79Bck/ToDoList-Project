@@ -1,0 +1,122 @@
+.projectTitle {
+    display: flex;    
+    align-items: center;
+    gap: 7px;
+    padding: 14px;
+    margin-bottom: 6.33%;
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 28px;
+    font-weight: 600;
+    background-color: burlywood;
+    color: brown;
+}
+
+.toDoContainer {
+    width: 750px;
+    margin: 100px auto;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.toDoCreateForm {
+    display: flex;
+    align-self: center;
+    width: 50%;
+    gap: 7px;
+    padding: 14px;
+    background-color:bisque;
+}
+
+.toDoInput,
+.toDoInputEdit {
+    flex-grow: 1;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: solid 2px goldenrod;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.buttonNew,
+.buttonUpdateToDo {
+    border: none;
+    cursor: pointer;
+    width: 25%;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: aliceblue;
+    background-color: darkgoldenrod;
+}
+
+.toDoListContainer {   
+    margin-top: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    
+}
+
+.toDoListContainer ul {   
+   list-style:decimal;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: rgb(19, 28, 36);
+    
+}
+
+.toDoEditForm, 
+.toDoInfo {
+    display: flex;
+    align-items: center;
+    
+    margin: 15px auto;
+    gap: 7px;
+    background-color:lavender
+}
+
+.toDoTitle {
+    flex: 1;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: rgb(19, 28, 36);
+    align-items: center;
+    justify-content: space-between;
+}
+
+.buttonEditToDo {
+    border: none;
+    cursor: pointer; 
+    padding: 8px;
+    margin: 10px;
+    align-items: flex-end;
+    border-radius: 5px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: aliceblue;
+    background-color: rgb(0, 149, 218);
+}
+
+.buttonDeleteToDo {
+    border: none;
+    cursor: pointer; 
+    padding: 8px;    
+    margin: 10px;
+  
+   align-items: flex-end;
+    border-radius: 5px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: aliceblue;
+    background-color: rgb(218, 44, 0);
+}

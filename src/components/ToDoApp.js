@@ -1,6 +1,8 @@
 import { useState } from "react";
 import ToDoList from "./ToDoList";
 
+import './ToDoApp.css'
+
 export default function ToDoApp () {
     /**
     * Se crea variable para almacenar los estados: 
@@ -52,7 +54,7 @@ export default function ToDoApp () {
         const temp = [...todolist];
         temp.push(newToDo);
         setTodolist(temp);
-     
+        setTitle("") //esto permite limpiar el valor title que utiliza en el input
     }
     
     /**
@@ -78,6 +80,7 @@ export default function ToDoApp () {
 
     return (
     <div className="toDoContainer"> 
+        <span className="projectTitle">1.- TO DO LIST PROJECT | REALIZADO CON REACT</span>
         <form className="toDoCreateForm" onSubmit={handleSubmit}>
             <input className="toDoInput" onChange={handleChange} value={ title }/>
             <input className="buttonNew" type="submit" onClick={handleSubmit} value="New" /> 

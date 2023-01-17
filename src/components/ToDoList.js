@@ -14,7 +14,7 @@ export default function ToDoList ({item, onUpdateToDo, onDeleteToDo}) {
         
         const elementEdit = <form className="toDoEditForm" onSubmit={handleSubmit}>
                                 <input className="toDoInputEdit" onChange={handleChange} value={updateToDo}/>
-                                <input className="buttonUpdate" type="submit" onClick={handleClick} value="Update" /> 
+                                <input className="buttonUpdateToDo" type="submit" onClick={handleClick} value="Update" /> 
                             </form>;
                             
         function handleSubmit(e) {
@@ -41,9 +41,9 @@ export default function ToDoList ({item, onUpdateToDo, onDeleteToDo}) {
     
     function ToDoElement() {
         const element = <div className="toDoInfo">
-                            {item.title} 
-                            <button onClick={() => setIsEdit(true) }>Edit</button> 
-                            <button onClick={() => onDeleteToDo(item.id)}>Delete</button> 
+                            <span className="toDoTitle">{item.title} </span>
+                            <button className="buttonEditToDo" onClick={() => setIsEdit(true) }>Edit</button> 
+                            <button className="buttonDeleteToDo"  onClick={() => onDeleteToDo(item.id)}>Delete</button> 
                         </div>
         return element;
     }
