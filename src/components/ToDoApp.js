@@ -11,6 +11,7 @@ export default function ToDoApp () {
     *      y el setter se escribe en minuscula camelCase y usando como prefijo set delante del nombre del getter
     *      por ejemplo: setNombre, setSexo, setFechaNac, etc. Se recomienda mantener los nombres en ingles.
     *      tal como name, setName, firstName, setFirstName, password, setPassword, etc.
+    *    - al asignarle este arreglo constante al metodo useState, este debe llevar como parametro un valor inicial.
     */
     const [title, setTitle] = useState("");
     const [todolist, setTodolist] = useState([]);
@@ -53,6 +54,18 @@ export default function ToDoApp () {
         setTodolist(temp);
      
     }
+    
+    /**
+     * Esta funcion handleUpdateToDo, viene siendo el evento de actualizar el valor del item de la lista de To Do.
+     * se crea 2 variables, uno para la copia del arreglo todolist y otra para encontrar el item al cual se modificara su valor,
+     * luego se cambia el valor de ese item y se actualiza la lista de To Do.
+     */
+    function handleUpdateToDo(id, value) {
+        const temp = [...todolist];
+        const item = temp.find(item => item.id === id);
+        item.title = value;
+        setTodolist(temp)
+    }
 
     return (
     <div className="toDoContainer"> 
@@ -71,7 +84,7 @@ export default function ToDoApp () {
                  */
                 todolist.map(item => (
                     //<li key={item.id}> {item.title} </li>
-                    <ToDoList item={item} key={item.id}/> //Se creo un componente llamado ToDoList el cual recibira como prop -item-, en su propiedad item
+                    <ToDoList item={item} key={item.id} onUpdateToDo={handleUpdateToDo}/> //Se creo un componente llamado ToDoList el cual recibira como prop -item-, en su propiedad item
                 ))
             }
             </ul>
