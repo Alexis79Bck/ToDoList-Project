@@ -1,6 +1,6 @@
 import { useState  } from "react";
 
-export default function ToDoList ({item, onUpdateToDo}) { 
+export default function ToDoList ({item, onUpdateToDo, onDeleteToDo}) { 
     
     const [isEdit, setIsEdit] = useState(false);
     
@@ -43,7 +43,7 @@ export default function ToDoList ({item, onUpdateToDo}) {
         const element = <div className="toDoInfo">
                             {item.title} 
                             <button onClick={() => setIsEdit(true) }>Edit</button> 
-                            <button>Delete</button> 
+                            <button onClick={() => onDeleteToDo(item.id)}>Delete</button> 
                         </div>
         return element;
     }

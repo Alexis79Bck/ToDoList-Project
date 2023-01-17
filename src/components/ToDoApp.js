@@ -66,6 +66,15 @@ export default function ToDoApp () {
         item.title = value;
         setTodolist(temp)
     }
+    
+    /**
+     * Esta funcion handleDeleteToDo, viene siendo el evento de eliminar el valor del item de la lista de To Do.
+     * se crea 1 variable temporal donde retorne una copia del arreglo todolist pero sin el item que tiene el id del elemento a eliminar,
+     */
+    function handleDeleteToDo(id){
+        const temp = todolist.filter(item => item.id !== id);
+        setTodolist(temp);
+    }
 
     return (
     <div className="toDoContainer"> 
@@ -84,7 +93,7 @@ export default function ToDoApp () {
                  */
                 todolist.map(item => (
                     //<li key={item.id}> {item.title} </li>
-                    <ToDoList item={item} key={item.id} onUpdateToDo={handleUpdateToDo}/> //Se creo un componente llamado ToDoList el cual recibira como prop -item-, en su propiedad item
+                    <ToDoList item={item} key={item.id} onUpdateToDo={handleUpdateToDo} onDeleteToDo={handleDeleteToDo}/> //Se creo un componente llamado ToDoList el cual recibira como prop -item-, en su propiedad item
                 ))
             }
             </ul>
