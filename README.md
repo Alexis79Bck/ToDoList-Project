@@ -3,7 +3,7 @@
 - Este proyecto es una práctica sencilla en el estudio autodidacta sobre la libreria React.JS
 
 - Simplemente se aplica un pequeño CRUD (Create, Read, Update, Delete) sobre la creación de elementos para una lista de tareas.
-No se está trabajó con base de datos ni solicitudes HTTP.
+No se trabajó con base de datos ni solicitudes HTTP.
 
 - La práctica inicial cuando un desarrollador desea aprender el funcionamiento mínimo de la reactividad que utiliza React.js para la elaboración de interfaces de usuarios.
 
